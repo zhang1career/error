@@ -1,0 +1,29 @@
+{
+    "name": "phplab/data",
+    "description": "error management",
+    "keywords": ["data structure"],
+    "homepage": "https://github.com/zhang1career/data",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "phplab\\error\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "phplab\\error\\tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Zhang Rongjin",
+            "email": "zhang_career@foxmail.com"
+        }
+    ]
+}
