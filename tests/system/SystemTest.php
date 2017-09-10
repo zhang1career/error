@@ -31,8 +31,17 @@ class SystemTest extends TestCase
      */
     public function testGetMessageParamSmallerThanMin()
     {
-        $message = System::getMessage(Tests::$error_param_smaller_than_min, 16);
+        $message = System::getMessage(Tests::$error_param_smaller_than_min, Tests::$value_16);
         $this->assertEquals(Tests::$error_param_smaller_than_min_message, $message);
+    }
+
+    /**
+     * param should not be value的错误信息
+     */
+    public function testGetMessageParamShouldNotBeValue()
+    {
+        $message = System::getMessage(Tests::$error_param_should_not_be_value, Tests::$value_0);
+        $this->assertEquals(Tests::$error_param_should_not_be_value_message, $message);
     }
 
     /****************************************

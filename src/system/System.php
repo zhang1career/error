@@ -17,20 +17,26 @@ class System extends Base
     const ERROR_PARAM_NOT_EXISTS = self::BASE_PARAM_NOT_EXISTS;
     const ERROR_PARAM_SMALLER_THAN_MIN = self::BASE_PARAM_SMALLER_THAN_MIN;
     const ERROR_PARAM_BIGGER_THAN_MAX = self::BASE_PARAM_BIGGER_THAN_MAX;
+    const ERROR_PARAM_SHOULD_BE_VALUE = self::BASE_PARAM_SHOULD_BE_VALUE;
+    const ERROR_PARAM_SHOULD_NOT_BE_VALUE = self::BASE_PARAM_SHOULD_NOT_BE_VALUE;
 
 
     private static $__messages = [
-        self::ERROR_OK                     => 'OK',
-        self::ERROR_PARAM_NOT_EXISTS       => 'Param not exists',
-        self::ERROR_PARAM_SMALLER_THAN_MIN => 'Param values too small',
-        self::ERROR_PARAM_BIGGER_THAN_MAX  => 'Param values too big',
+        self::ERROR_OK                        => 'OK',
+        self::ERROR_PARAM_NOT_EXISTS          => 'Param not exists',
+        self::ERROR_PARAM_SMALLER_THAN_MIN    => 'Param values too small',
+        self::ERROR_PARAM_BIGGER_THAN_MAX     => 'Param values too big',
+        self::ERROR_PARAM_SHOULD_BE_VALUE     => 'Param should be value',
+        self::ERROR_PARAM_SHOULD_NOT_BE_VALUE => 'Param should not be value',
     ];
 
 
     private static $__tips = [
-        self::ERROR_PARAM_NOT_EXISTS       => 'name:',
-        self::ERROR_PARAM_SMALLER_THAN_MIN => 'min:',
-        self::ERROR_PARAM_BIGGER_THAN_MAX  => 'max:',
+        self::ERROR_PARAM_NOT_EXISTS          => 'name:',
+        self::ERROR_PARAM_SMALLER_THAN_MIN    => 'min:',
+        self::ERROR_PARAM_BIGGER_THAN_MAX     => 'max:',
+        self::ERROR_PARAM_SHOULD_BE_VALUE     => 'value:',
+        self::ERROR_PARAM_SHOULD_NOT_BE_VALUE => 'value:',
     ];
 
     /**
