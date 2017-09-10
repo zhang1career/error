@@ -1,7 +1,7 @@
 {
     "name": "phplab/error",
     "description": "error management",
-    "keywords": ["data structure"],
+    "keywords": ["error"],
     "homepage": "https://github.com/zhang1career/data",
     "license": "MIT",
     "require": {
