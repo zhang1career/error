@@ -15,14 +15,14 @@ class System extends Base
     const ERROR_OK = self::BASE_OK;
 
     const ERROR_PARAM_NOT_EXISTS = self::BASE_PARAM_NOT_EXISTS;
-    const ERROR_PARAM_UNDERFLOW = self::BASE_PARAM_UNDERFLOW;
-    const ERROR_PARAM_OVERFLOW = self::BASE_PARAM_OVERFLOW;
+    const ERROR_PARAM_SMALLER_THAN_MIN = self::BASE_PARAM_SMALLER_THAN_MIN;
+    const ERROR_PARAM_BIGGER_THAN_MAX = self::BASE_PARAM_BIGGER_THAN_MAX;
 
 
     public static $MESSAGE = [
-        self::ERROR_OK               => 'OK',
-        self::ERROR_PARAM_NOT_EXISTS => 'Param not exists',
-        self::ERROR_PARAM_UNDERFLOW  => 'Param values too small',
-        self::ERROR_PARAM_OVERFLOW   => 'Param values too big',
+        self::ERROR_OK                     => 'OK',
+        self::ERROR_PARAM_NOT_EXISTS       => 'Param not exists',
+        self::ERROR_PARAM_SMALLER_THAN_MIN => 'Param values too small',
+        self::ERROR_PARAM_BIGGER_THAN_MAX  => 'Param values too big',
     ];
 }

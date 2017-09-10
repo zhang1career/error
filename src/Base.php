@@ -11,9 +11,9 @@ namespace phplab\error;
 
 class Base
 {
-    const BASE_OK                   = 0;
+    const BASE_OK = 0;
 
-    const BASE_PARAM_NOT_EXISTS     = 10;
-    const BASE_PARAM_UNDERFLOW      = 11;
-    const BASE_PARAM_OVERFLOW       = 12;
+    const BASE_PARAM_NOT_EXISTS = 10;
+    const BASE_PARAM_SMALLER_THAN_MIN = 11;
+    const BASE_PARAM_BIGGER_THAN_MAX = 12;
 }
