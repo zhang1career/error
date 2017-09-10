@@ -34,7 +34,7 @@ class System extends Base
     ];
 
 
-    public static function getMessage($error)
+    public static function getMessage($error, $tip_value = NULL)
     {
         $message = isset(self::$__messages[$error]) ? self::$__messages[$error] : '';
         $tip = isset(self::$__tips[$error]) ? self::$__tips[$error] : '';
@@ -45,6 +45,6 @@ class System extends Base
         }
 
         // give some tip
-        return $message . ', ' . $tip;
+        return $message . ', ' . $tip . $tip_value;
     }
 }

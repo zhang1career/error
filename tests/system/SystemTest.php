@@ -18,17 +18,35 @@ class SystemTest extends TestCase
      * Function Tests
      ****************************************/
     /**
-     * 入参之集合增量
+     * ok的错误信息
      */
-    public function testGetMessage()
+    public function testGetMessageOK()
     {
         $message = System::getMessage(Tests::$error_ok);
         $this->assertEquals(Tests::$error_ok_message, $message);
     }
 
+    /**
+     * param smaller than min的错误信息
+     */
+    public function testGetMessageParamSmallerThanMin()
+    {
+        $message = System::getMessage(Tests::$error_param_smaller_than_min, 16);
+        $this->assertEquals(Tests::$error_param_smaller_than_min_message, $message);
+    }
+
     /****************************************
      * Illegal Tests
      ****************************************/
+    /**
+     * ok的错误信息
+     */
+    public function testGetMessageWithUnknownErrorCode()
+    {
+        $message = System::getMessage(Tests::$error_unknown);
+        $this->assertEmpty($message);
+    }
+
 
     /****************************************
      * Edge Tests
