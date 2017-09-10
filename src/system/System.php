@@ -18,15 +18,33 @@ class System extends Base
     const ERROR_PARAM_SMALLER_THAN_MIN = self::BASE_PARAM_SMALLER_THAN_MIN;
     const ERROR_PARAM_BIGGER_THAN_MAX = self::BASE_PARAM_BIGGER_THAN_MAX;
 
-    private static $__message = [
+
+    private static $__messages = [
         self::ERROR_OK                     => 'OK',
         self::ERROR_PARAM_NOT_EXISTS       => 'Param not exists',
         self::ERROR_PARAM_SMALLER_THAN_MIN => 'Param values too small',
         self::ERROR_PARAM_BIGGER_THAN_MAX  => 'Param values too big',
     ];
 
+
+    private static $__tips = [
+        self::ERROR_PARAM_NOT_EXISTS       => 'name:',
+        self::ERROR_PARAM_SMALLER_THAN_MIN => 'min:',
+        self::ERROR_PARAM_BIGGER_THAN_MAX  => 'max:',
+    ];
+
+
     public static function getMessage($error)
     {
-        return isset(self::$__message[$error]) ? self::$__message[$error] : '';
+        $message = isset(self::$__messages[$error]) ? self::$__messages[$error] : '';
+        $tip = isset(self::$__tips[$error]) ? self::$__tips[$error] : '';
+
+        // no tip
+        if (!$tip) {
+            return $message;
+        }
+
+        // give some tip
+        return $message . ', ' . $tip;
     }
 }
