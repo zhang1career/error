@@ -33,7 +33,12 @@ class System extends Base
         self::ERROR_PARAM_BIGGER_THAN_MAX  => 'max:',
     ];
 
-
+    /**
+     * Get error message, with tip if necessary
+     * @param $error
+     * @param null $tip_value
+     * @return mixed|string
+     */
     public static function getMessage($error, $tip_value = NULL)
     {
         $message = isset(self::$__messages[$error]) ? self::$__messages[$error] : '';
