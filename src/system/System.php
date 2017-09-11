@@ -21,7 +21,7 @@ class System extends Base
     const ERROR_PARAM_SHOULD_NOT_BE_VALUE = self::BASE_PARAM_SHOULD_NOT_BE_VALUE;
 
 
-    private static $__messages = [
+    private static $messages = [
         self::ERROR_OK                        => 'OK',
         self::ERROR_PARAM_NOT_EXISTS          => 'Param not exists',
         self::ERROR_PARAM_SMALLER_THAN_MIN    => 'Param values too small',
@@ -31,7 +31,7 @@ class System extends Base
     ];
 
 
-    private static $__tips = [
+    private static $tips = [
         self::ERROR_PARAM_NOT_EXISTS          => 'name:',
         self::ERROR_PARAM_SMALLER_THAN_MIN    => 'min:',
         self::ERROR_PARAM_BIGGER_THAN_MAX     => 'max:',
@@ -45,10 +45,10 @@ class System extends Base
      * @param null $tip_value
      * @return mixed|string
      */
-    public static function getMessage($error, $tip_value = NULL)
+    public static function getMessage($error, $tip_value = null)
     {
-        $message = isset(self::$__messages[$error]) ? self::$__messages[$error] : '';
-        $tip = isset(self::$__tips[$error]) ? self::$__tips[$error] : '';
+        $message = isset(self::$messages[$error]) ? self::$messages[$error] : '';
+        $tip = isset(self::$tips[$error]) ? self::$tips[$error] : '';
 
         // no tip
         if (!$tip) {

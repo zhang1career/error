@@ -8,7 +8,6 @@
 
 namespace phplab\error;
 
-
 class Base
 {
     const BASE_OK = 0;
