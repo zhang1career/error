@@ -20,6 +20,7 @@ class System extends Base
     const ERROR_PARAM_SHOULD_BE_VALUE = self::BASE_PARAM_SHOULD_BE_VALUE;
     const ERROR_PARAM_SHOULD_NOT_BE_VALUE = self::BASE_PARAM_SHOULD_NOT_BE_VALUE;
 
+    const ERROR_METHOD_NOT_EXISTS = self::BASE_METHOD_NOT_EXISTS;
 
     private static $messages = [
         self::ERROR_OK                        => 'OK',
@@ -28,6 +29,8 @@ class System extends Base
         self::ERROR_PARAM_BIGGER_THAN_MAX     => 'Param values too big',
         self::ERROR_PARAM_SHOULD_BE_VALUE     => 'Param should be value',
         self::ERROR_PARAM_SHOULD_NOT_BE_VALUE => 'Param should not be value',
+
+        self::ERROR_METHOD_NOT_EXISTS         => 'Method not exists',
     ];
 
 
@@ -37,6 +40,8 @@ class System extends Base
         self::ERROR_PARAM_BIGGER_THAN_MAX     => 'max:',
         self::ERROR_PARAM_SHOULD_BE_VALUE     => 'value:',
         self::ERROR_PARAM_SHOULD_NOT_BE_VALUE => 'value:',
+
+        self::ERROR_METHOD_NOT_EXISTS         => 'name:',
     ];
 
     /**
