@@ -6,7 +6,7 @@
  * Time: 8:21 PM
  */
 
-namespace phplab\error\tests;
+namespace phplab\error\tests\system;
 
 use phplab\error\System;
 

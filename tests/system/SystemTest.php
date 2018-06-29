@@ -9,7 +9,6 @@
 namespace phplab\error\tests\system;
 
 use phplab\error\System;
-use phplab\error\tests\SystemData;
 use PHPUnit\Framework\TestCase;
 
 class SystemTest extends TestCase
