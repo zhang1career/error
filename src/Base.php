@@ -10,28 +10,35 @@ namespace phplab\error;
 
 class Base
 {
-    const BASE_PATH = 0000;
-    const BASE_FILE = 0100;
-    const BASE_FUNCTION = 0200;
-    const BASE_PARAM = 0300;
-    const BASE_RETURN = 0400;
+    /** target */
+    const PATH      = 10;
+    const FILE      = 11;
+    const FUNCTION  = 12;
+    const PARAM     = 13;
+    const RUNTIME   = 24;
+    const RETURN    = 16;
 
-    const BASE_NAMESPACE = 1000;
-    const BASE_OBJECT = 1100;
-    const BASE_METHOD = 1200;
+    const NAMESPACE = 20;
+    const GLASS     = 21;   // class
+    const METHOD    = 22;
+    const MEMBER    = 23;
 
-    const BASE_ITEM = 6000;
-    const BASE_TARGET = 8000;
+    const DATASET   = 30;   // array
+    const INDEX     = 31;
+
+    const OBJECT    = 40;   // object
+    const PROPERTY  = 41;
 
 
-    const BASE_OK = 0;
+    /** status */
+    const OK                    = 0;
 
-    const BASE_NOT_EXISTS = 10;
-    const BASE_NOT_AVAILABLE = 11;
+    const NOT_EXISTS            = 10;
+    const NOT_AVAILABLE         = 11;
 
-    const BASE_TYPE_SHOULD_BE_NUMBER = 20;
-    const BASE_TYPE_SHOULD_BE_STRING = 21;
+    const TYPE_SHOULD_BE_NUMBER = 20;
+    const TYPE_SHOULD_BE_STRING = 21;
 
-    const BASE_VALUE_TOO_BIG = 30;
-    const BASE_VALUE_TOO_SMALL = 31;
+    const VALUE_TOO_BIG         = 30;
+    const VALUE_TOO_SMALL       = 31;
 }

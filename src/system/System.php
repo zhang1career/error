@@ -10,47 +10,50 @@ namespace phplab\error\system;
 
 use phplab\error\Base;
 
+define('OK', Base::OK);
+
+define('ERROR_PARAM_NOT_EXISTS', Base::PARAM + Base::NOT_EXISTS);
+define('ERROR_PARAM_SMALLER_THAN_MIN', Base::PARAM + Base::VALUE_TOO_SMALL);
+define('ERROR_PARAM_BIGGER_THAN_MAX', Base::PARAM + Base::VALUE_TOO_BIG);
+define('ERROR_PARAM_SHOULD_BE_NUMBER', Base::PARAM + Base::TYPE_SHOULD_BE_NUMBER);
+define('ERROR_PARAM_SHOULD_BE_STRING', Base::PARAM + Base::TYPE_SHOULD_BE_STRING);
+
+define('ERROR_METHOD_NOT_EXISTS', Base::METHOD + Base::NOT_EXISTS);
+
+define('ERROR_INDEX_NOT_EXISTS', Base::INDEX + Base::NOT_EXISTS);
+define('ERROR_PROPERTY_NOT_EXISTS', Base::PROPERTY + Base::NOT_EXISTS);
+
+
 class System extends Base
 {
-    const ERROR_OK = self::BASE_OK;
 
-    const ERROR_PARAM_NOT_EXISTS = self::BASE_PARAM | self::BASE_NOT_EXISTS;
-    const ERROR_PARAM_SMALLER_THAN_MIN = self::BASE_PARAM | self::BASE_VALUE_TOO_SMALL;
-    const ERROR_PARAM_BIGGER_THAN_MAX = self::BASE_PARAM | self::BASE_VALUE_TOO_BIG;
-    const ERROR_PARAM_SHOULD_BE_NUMBER = self::BASE_PARAM | self::BASE_TYPE_SHOULD_BE_NUMBER;
-    const ERROR_PARAM_SHOULD_BE_STRING = self::BASE_PARAM | self::BASE_TYPE_SHOULD_BE_STRING;
-
-    const ERROR_METHOD_NOT_EXISTS = self::BASE_METHOD | self::BASE_NOT_EXISTS;
-
-    const ERROR_ITEM_NOT_EXISTS = self::BASE_ITEM | self::BASE_NOT_EXISTS;
-    const ERROR_TARGET_NOT_EXISTS = self::BASE_TARGET | self::BASE_NOT_EXISTS;
 
     private static $messages = [
-        self::ERROR_OK                     => 'OK',
-        self::ERROR_PARAM_NOT_EXISTS       => 'Param not exists',
-        self::ERROR_PARAM_SMALLER_THAN_MIN => 'Param values too small',
-        self::ERROR_PARAM_BIGGER_THAN_MAX  => 'Param values too big',
-        self::ERROR_PARAM_SHOULD_BE_NUMBER => 'Param should be nerumb',
-        self::ERROR_PARAM_SHOULD_BE_STRING => 'Param should not be string',
+        OK                     => 'OK',
+        ERROR_PARAM_NOT_EXISTS       => 'Param not exists',
+        ERROR_PARAM_SMALLER_THAN_MIN => 'Param values too small',
+        ERROR_PARAM_BIGGER_THAN_MAX  => 'Param values too big',
+        ERROR_PARAM_SHOULD_BE_NUMBER => 'Param should be number',
+        ERROR_PARAM_SHOULD_BE_STRING => 'Param should be string',
 
-        self::ERROR_METHOD_NOT_EXISTS      => 'Method not exists',
+        ERROR_METHOD_NOT_EXISTS      => 'Method not exists',
 
-        self::ERROR_ITEM_NOT_EXISTS        => 'Item not exsts',
-        self::ERROR_TARGET_NOT_EXISTS      => 'Target not exists',
+        ERROR_INDEX_NOT_EXISTS       => 'Item not exsts',
+        ERROR_PROPERTY_NOT_EXISTS    => 'Target not exists',
     ];
 
 
     private static $tips = [
-        self::ERROR_PARAM_NOT_EXISTS       => 'name:',
-        self::ERROR_PARAM_SMALLER_THAN_MIN => 'min:',
-        self::ERROR_PARAM_BIGGER_THAN_MAX  => 'max:',
-        self::ERROR_PARAM_SHOULD_BE_NUMBER => 'value:',
-        self::ERROR_PARAM_SHOULD_BE_STRING => 'value:',
+        ERROR_PARAM_NOT_EXISTS       => 'name:',
+        ERROR_PARAM_SMALLER_THAN_MIN => 'min:',
+        ERROR_PARAM_BIGGER_THAN_MAX  => 'max:',
+        ERROR_PARAM_SHOULD_BE_NUMBER => 'value:',
+        ERROR_PARAM_SHOULD_BE_STRING => 'value:',
 
-        self::ERROR_METHOD_NOT_EXISTS      => 'name:',
+        ERROR_METHOD_NOT_EXISTS      => 'name:',
 
-        self::ERROR_ITEM_NOT_EXISTS        => 'name:',
-        self::ERROR_TARGET_NOT_EXISTS      => 'name:',
+        ERROR_INDEX_NOT_EXISTS       => 'name:',
+        ERROR_PROPERTY_NOT_EXISTS    => 'name:',
     ];
 
     /**
@@ -61,6 +64,7 @@ class System extends Base
      */
     public static function getMessage($error, $tip_value = null)
     {
+//        var_dump(self::$messages);die();
         $message = isset(self::$messages[$error]) ? self::$messages[$error] : '';
         $tip = isset(self::$tips[$error]) ? self::$tips[$error] : '';
 

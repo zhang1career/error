@@ -40,8 +40,8 @@ class SystemTest extends TestCase
      */
     public function testGetMessageParamShouldNotBeValue()
     {
-        $message = System::getMessage(Tests::$error_param_should_not_be_value, Tests::$value_0);
-        $this->assertEquals(Tests::$error_param_should_not_be_value_message, $message);
+        $message = System::getMessage(Tests::$error_param_should_be_string, Tests::$value_0);
+        $this->assertEquals(Tests::$error_param_should_be_string_message, $message);
     }
 
     /****************************************
