@@ -11,23 +11,23 @@ namespace phplab\error;
 class Base
 {
     /** target */
-    const PATH      = 10;
-    const FILE      = 11;
-    const FUNCTION  = 12;
-    const PARAM     = 13;
-    const RUNTIME   = 24;
-    const RETURN    = 16;
+    const PATH      = 1000;
+    const FILE      = 1100;
+    const FUNCTION  = 1200;
+    const PARAM     = 1300;
+    const RUNTIME   = 2400;
+    const RETURN    = 1600;
 
-    const NAMESPACE = 20;
-    const GLASS     = 21;   // class
-    const METHOD    = 22;
-    const MEMBER    = 23;
+    const NAMESPACE = 2000;
+    const GLASS     = 2100;   // class
+    const METHOD    = 2200;
+    const MEMBER    = 2300;
 
-    const DATASET   = 30;   // array
-    const INDEX     = 31;
+    const DATASET   = 3000;   // array
+    const INDEX     = 3100;
 
-    const OBJECT    = 40;   // object
-    const PROPERTY  = 41;
+    const OBJECT    = 4000;   // object
+    const PROPERTY  = 4100;
 
 
     /** status */
