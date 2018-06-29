@@ -8,15 +8,17 @@
 
 namespace phplab\error\tests;
 
+use phplab\error\system\System;
+
 class Tests
 {
     public static $ok = 0;
     public static $ok_message = 'OK';
 
-    public static $error_param_smaller_than_min = 1331;
+    public static $error_param_smaller_than_min = System::ERROR_PARAM_SMALLER_THAN_MIN;
     public static $error_param_smaller_than_min_message = 'Param values too small';
 
-    public static $error_param_should_be_string = 1321;
+    public static $error_param_should_be_string = System::ERROR_PARAM_SHOULD_BE_STRING;
     public static $error_param_should_be_string_message = 'Param should be string';
 
     public static $error_unknown = 99999999;
