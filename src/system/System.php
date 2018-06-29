@@ -26,13 +26,15 @@ define('ERROR_PROPERTY_NOT_EXISTS', Base::PROPERTY + Base::NOT_EXISTS);
 
 class System extends Base
 {
-    public function getErrorMessage($errno)
+    public static function build($errno, $ext = null)
     {
         $message = isset(self::$messages[$errno]) ? self::$messages[$errno] : 'undefined message';
+        $tip = isset(self::$tips[$errno]) ? self::$tips[$errno] . $ext : '';
 
         return [
             'errno'  => $errno,
             'errmsg' => $message,
+            'tip'    => $tip,
         ];
     }
 
@@ -46,42 +48,21 @@ class System extends Base
 
         ERROR_METHOD_NOT_EXISTS      => 'Method not exists',
 
-        ERROR_INDEX_NOT_EXISTS       => 'Item not exsts',
-        ERROR_PROPERTY_NOT_EXISTS    => 'Target not exists',
+        ERROR_INDEX_NOT_EXISTS       => 'Index not exsts',
+        ERROR_PROPERTY_NOT_EXISTS    => 'Property not exists',
     ];
 
 
     private static $tips = [
         ERROR_PARAM_NOT_EXISTS       => 'name:',
-        ERROR_PARAM_SMALLER_THAN_MIN => 'min:',
-        ERROR_PARAM_BIGGER_THAN_MAX  => 'max:',
-        ERROR_PARAM_SHOULD_BE_NUMBER => 'value:',
-        ERROR_PARAM_SHOULD_BE_STRING => 'value:',
+        ERROR_PARAM_SMALLER_THAN_MIN => 'value:',
+        ERROR_PARAM_BIGGER_THAN_MAX  => 'value:',
+        ERROR_PARAM_SHOULD_BE_NUMBER => 'name:',
+        ERROR_PARAM_SHOULD_BE_STRING => 'name:',
 
         ERROR_METHOD_NOT_EXISTS      => 'name:',
 
-        ERROR_INDEX_NOT_EXISTS       => 'name:',
+        ERROR_INDEX_NOT_EXISTS       => 'index:',
         ERROR_PROPERTY_NOT_EXISTS    => 'name:',
     ];
-
-    /**
-     * Get error message, with tip if necessary
-     * @param $error
-     * @param null $tip_value
-     * @return mixed|string
-     */
-    public static function getMessage($error, $tip_value = null)
-    {
-//        var_dump(self::$messages);die();
-        $message = isset(self::$messages[$error]) ? self::$messages[$error] : '';
-        $tip = isset(self::$tips[$error]) ? self::$tips[$error] : '';
-
-        // no tip
-        if (!$tip) {
-            return $message;
-        }
-
-        // give some tip
-        return $message . ', ' . $tip . $tip_value;
-    }
 }
