@@ -6,9 +6,7 @@
  * Time: 8:16 PM
  */
 
-namespace phplab\error\system;
-
-use phplab\error\Base;
+namespace phplab\error;
 
 class System extends Base
 {

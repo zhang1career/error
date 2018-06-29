@@ -8,9 +8,9 @@
 
 namespace phplab\error\tests;
 
-use phplab\error\system\System;
+use phplab\error\System;
 
-class Tests
+class SystemData
 {
     public static $ok = 0;
     public static $ok_message = 'OK';

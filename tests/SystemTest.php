@@ -8,8 +8,8 @@
 
 namespace phplab\error\tests\system;
 
-use phplab\error\system\System;
-use phplab\error\tests\Tests;
+use phplab\error\System;
+use phplab\error\tests\SystemData;
 use PHPUnit\Framework\TestCase;
 
 class SystemTest extends TestCase
@@ -22,8 +22,8 @@ class SystemTest extends TestCase
      */
     public function testGetMessageOK()
     {
-        $message = System::build(Tests::$ok);
-        $this->assertEquals(Tests::$ok_message, $message['errmsg']);
+        $message = System::build(SystemData::$ok);
+        $this->assertEquals(SystemData::$ok_message, $message['errmsg']);
     }
 
     /**
@@ -31,8 +31,8 @@ class SystemTest extends TestCase
      */
     public function testGetMessageParamSmallerThanMin()
     {
-        $message = System::build(Tests::$error_param_smaller_than_min, Tests::$value_16);
-        $this->assertEquals(Tests::$error_param_smaller_than_min_message, $message['errmsg']);
+        $message = System::build(SystemData::$error_param_smaller_than_min, SystemData::$value_16);
+        $this->assertEquals(SystemData::$error_param_smaller_than_min_message, $message['errmsg']);
     }
 
     /**
@@ -40,8 +40,8 @@ class SystemTest extends TestCase
      */
     public function testGetMessageParamShouldNotBeValue()
     {
-        $message = System::build(Tests::$error_param_should_be_string, Tests::$value_0);
-        $this->assertEquals(Tests::$error_param_should_be_string_message, $message['errmsg']);
+        $message = System::build(SystemData::$error_param_should_be_string, SystemData::$value_0);
+        $this->assertEquals(SystemData::$error_param_should_be_string_message, $message['errmsg']);
     }
 
     /****************************************
@@ -52,8 +52,8 @@ class SystemTest extends TestCase
      */
     public function testGetMessageWithUnknownErrorCode()
     {
-        $message = System::build(Tests::$error_unknown);
-        $this->assertEquals(Tests::$error_unknown_errmsg, $message['errmsg']);
+        $message = System::build(SystemData::$error_unknown);
+        $this->assertEquals(SystemData::$error_unknown_errmsg, $message['errmsg']);
     }
 
 
