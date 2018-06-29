@@ -17,7 +17,7 @@ class SystemTest extends TestCase
      * Function Tests
      ****************************************/
     /**
-     * ok的错误信息
+     * ok 的错误信息
      */
     public function testBuildOK()
     {
@@ -26,7 +26,7 @@ class SystemTest extends TestCase
     }
 
     /**
-     * param smaller than min的错误信息
+     * param smaller than min 的错误信息
      */
     public function testBuildParamSmallerThanMin()
     {
@@ -35,7 +35,16 @@ class SystemTest extends TestCase
     }
 
     /**
-     * param should not be value的错误信息
+     * param should be value 的错误信息
+     */
+    public function testBuildParamShouldBeValue()
+    {
+        $message = System::build(SystemData::$error_param_should_be_value);
+        $this->assertEquals(SystemData::$error_param_should_be_value_message, $message['errmsg']);
+    }
+
+    /**
+     * param should not be value 的错误信息
      */
     public function testBuildParamShouldNotBeValue()
     {

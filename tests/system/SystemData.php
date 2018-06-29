@@ -18,6 +18,9 @@ class SystemData
     public static $error_param_smaller_than_min = System::ERROR_PARAM_SMALLER_THAN_MIN;
     public static $error_param_smaller_than_min_message = 'Param values too small';
 
+    public static $error_param_should_be_value = System::ERROR_PARAM_SHOULD_BE_VALUE;
+    public static $error_param_should_be_value_message = 'Param should be value';
+
     public static $error_param_should_not_be_value = System::ERROR_PARAM_SHOULD_NOT_BE_VALUE;
     public static $error_param_should_not_be_value_message = 'Param should not be value';
 
