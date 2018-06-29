@@ -10,7 +10,7 @@ namespace phplab\error\tests\system;
 
 use phplab\error\System;
 
-class SystemData
+class Data
 {
     public static $ok = System::OK;
     public static $ok_message = 'OK';
@@ -28,7 +28,7 @@ class SystemData
     public static $error_param_should_be_string_message = 'Param should be string';
 
     public static $error_unknown = 99999999;
-    public static $error_unknown_errmsg = 'undefined message';
+    public static $error_unknown_message = 'undefined message';
 
 
     public static $value_0 = 0;
