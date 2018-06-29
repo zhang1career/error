@@ -26,10 +26,18 @@ define('ERROR_PROPERTY_NOT_EXISTS', Base::PROPERTY + Base::NOT_EXISTS);
 
 class System extends Base
 {
+    public function getErrorMessage($errno)
+    {
+        $message = isset(self::$messages[$errno]) ? self::$messages[$errno] : 'undefined message';
 
+        return [
+            'errno'  => $errno,
+            'errmsg' => $message,
+        ];
+    }
 
     private static $messages = [
-        OK                     => 'OK',
+        OK                           => 'OK',
         ERROR_PARAM_NOT_EXISTS       => 'Param not exists',
         ERROR_PARAM_SMALLER_THAN_MIN => 'Param values too small',
         ERROR_PARAM_BIGGER_THAN_MAX  => 'Param values too big',
