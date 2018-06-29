@@ -15,6 +15,8 @@ class System extends Base
     const ERROR_PARAM_NOT_EXISTS            = Base::PARAM + Base::NOT_EXISTS;
     const ERROR_PARAM_SMALLER_THAN_MIN      = Base::PARAM + Base::VALUE_TOO_SMALL;
     const ERROR_PARAM_BIGGER_THAN_MAX       = Base::PARAM + Base::VALUE_TOO_BIG;
+    const ERROR_PARAM_SHOULD_BE_VALUE       = Base::PARAM + Base::VALUE_SHOULD_BE;
+    const ERROR_PARAM_SHOULD_NOT_BE_VALUE   = Base::PARAM + Base::VALUE_SHOULD_NOT_BE;
     const ERROR_PARAM_SHOULD_BE_NUMBER      = Base::PARAM + Base::TYPE_SHOULD_BE_NUMBER;
     const ERROR_PARAM_SHOULD_BE_STRING      = Base::PARAM + Base::TYPE_SHOULD_BE_STRING;
 
@@ -30,6 +32,8 @@ class System extends Base
         self::ERROR_PARAM_NOT_EXISTS       => 'Param not exists',
         self::ERROR_PARAM_SMALLER_THAN_MIN => 'Param values too small',
         self::ERROR_PARAM_BIGGER_THAN_MAX  => 'Param values too big',
+        self::ERROR_PARAM_SHOULD_BE_VALUE  => 'Param should be value',
+        self::ERROR_PARAM_SHOULD_NOT_BE_VALUE => 'Param should not be value',
         self::ERROR_PARAM_SHOULD_BE_NUMBER => 'Param should be number',
         self::ERROR_PARAM_SHOULD_BE_STRING => 'Param should be string',
 
@@ -44,6 +48,8 @@ class System extends Base
         self::ERROR_PARAM_NOT_EXISTS       => 'name:',
         self::ERROR_PARAM_SMALLER_THAN_MIN => 'value:',
         self::ERROR_PARAM_BIGGER_THAN_MAX  => 'value:',
+        self::ERROR_PARAM_SHOULD_BE_VALUE  => 'white:',
+        self::ERROR_PARAM_SHOULD_NOT_BE_VALUE => 'black:',
         self::ERROR_PARAM_SHOULD_BE_NUMBER => 'name:',
         self::ERROR_PARAM_SHOULD_BE_STRING => 'name:',
 

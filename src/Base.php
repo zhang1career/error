@@ -41,4 +41,6 @@ class Base
 
     const VALUE_TOO_BIG         = 30;
     const VALUE_TOO_SMALL       = 31;
+    const VALUE_SHOULD_BE       = 32;
+    const VALUE_SHOULD_NOT_BE   = 33;
 }

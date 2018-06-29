@@ -19,7 +19,7 @@ class SystemTest extends TestCase
     /**
      * ok的错误信息
      */
-    public function testGetMessageOK()
+    public function testBuildOK()
     {
         $message = System::build(SystemData::$ok);
         $this->assertEquals(SystemData::$ok_message, $message['errmsg']);
@@ -28,18 +28,27 @@ class SystemTest extends TestCase
     /**
      * param smaller than min的错误信息
      */
-    public function testGetMessageParamSmallerThanMin()
+    public function testBuildParamSmallerThanMin()
     {
-        $message = System::build(SystemData::$error_param_smaller_than_min, SystemData::$value_16);
+        $message = System::build(SystemData::$error_param_smaller_than_min);
         $this->assertEquals(SystemData::$error_param_smaller_than_min_message, $message['errmsg']);
     }
 
     /**
      * param should not be value的错误信息
      */
-    public function testGetMessageParamShouldNotBeValue()
+    public function testBuildParamShouldNotBeValue()
     {
-        $message = System::build(SystemData::$error_param_should_be_string, SystemData::$value_0);
+        $message = System::build(SystemData::$error_param_should_not_be_value);
+        $this->assertEquals(SystemData::$error_param_should_not_be_value_message, $message['errmsg']);
+    }
+
+    /**
+     * param should be string 的错误信息
+     */
+    public function testBuildParamShouldBeString()
+    {
+        $message = System::build(SystemData::$error_param_should_be_string);
         $this->assertEquals(SystemData::$error_param_should_be_string_message, $message['errmsg']);
     }
 
@@ -49,7 +58,7 @@ class SystemTest extends TestCase
     /**
      * ok的错误信息
      */
-    public function testGetMessageWithUnknownErrorCode()
+    public function testBuildWithUnknownErrorCode()
     {
         $message = System::build(SystemData::$error_unknown);
         $this->assertEquals(SystemData::$error_unknown_errmsg, $message['errmsg']);
