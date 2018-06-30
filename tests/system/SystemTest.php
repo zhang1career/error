@@ -53,6 +53,15 @@ class SystemTest extends TestCase
     }
 
     /**
+     * param has wrong type 的错误信息
+     */
+    public function testBuildParamHasWrongType()
+    {
+        $message = System::build(Data::$error_param_has_wrong_type);
+        $this->assertEquals(Data::$error_param_has_wrong_type_message, $message['errmsg']);
+    }
+
+    /**
      * param should be string 的错误信息
      */
     public function testBuildParamShouldBeString()

@@ -17,7 +17,10 @@ class System extends Base
     const ERROR_PARAM_BIGGER_THAN_MAX       = Base::PARAM + Base::VALUE_TOO_BIG;
     const ERROR_PARAM_SHOULD_BE_VALUE       = Base::PARAM + Base::VALUE_SHOULD_BE;
     const ERROR_PARAM_SHOULD_NOT_BE_VALUE   = Base::PARAM + Base::VALUE_SHOULD_NOT_BE;
+    const ERROR_PARAM_TYPE                  = Base::PARAM + Base::TYPE;
     const ERROR_PARAM_SHOULD_BE_NUMBER      = Base::PARAM + Base::TYPE_SHOULD_BE_NUMBER;
+    const ERROR_PARAM_SHOULD_BE_ARRAY       = Base::PARAM + Base::TYPE_SHOULD_BE_ARRAY;
+    const ERROR_PARAM_SHOULD_BE_OBJECT      = Base::PARAM + Base::TYPE_SHOULD_BE_OBJECT;
     const ERROR_PARAM_SHOULD_BE_STRING      = Base::PARAM + Base::TYPE_SHOULD_BE_STRING;
 
     const ERROR_METHOD_NOT_EXISTS           = Base::METHOD + Base::NOT_EXISTS;
@@ -26,7 +29,7 @@ class System extends Base
     const ERROR_PROPERTY_NOT_EXISTS         = Base::PROPERTY + Base::NOT_EXISTS;
 
 
-    protected static $messages = [
+    public static $messages = [
         self::OK                           => 'OK',
 
         self::ERROR_PARAM_NOT_EXISTS       => 'Param not exists',
@@ -34,7 +37,10 @@ class System extends Base
         self::ERROR_PARAM_BIGGER_THAN_MAX  => 'Param values too big',
         self::ERROR_PARAM_SHOULD_BE_VALUE  => 'Param should be value',
         self::ERROR_PARAM_SHOULD_NOT_BE_VALUE => 'Param should not be value',
+        self::ERROR_PARAM_TYPE              => 'Param has wrong type',
         self::ERROR_PARAM_SHOULD_BE_NUMBER => 'Param should be number',
+        self::ERROR_PARAM_SHOULD_BE_ARRAY  => 'Param should be array',
+        self::ERROR_PARAM_SHOULD_BE_OBJECT => 'Param should be object',
         self::ERROR_PARAM_SHOULD_BE_STRING => 'Param should be string',
 
         self::ERROR_METHOD_NOT_EXISTS      => 'Method not exists',
@@ -44,13 +50,16 @@ class System extends Base
     ];
 
 
-    protected static $tips = [
+    public static $tips = [
         self::ERROR_PARAM_NOT_EXISTS       => 'name:',
         self::ERROR_PARAM_SMALLER_THAN_MIN => 'value:',
         self::ERROR_PARAM_BIGGER_THAN_MAX  => 'value:',
         self::ERROR_PARAM_SHOULD_BE_VALUE  => 'white:',
         self::ERROR_PARAM_SHOULD_NOT_BE_VALUE => 'black:',
+        self::ERROR_PARAM_TYPE             => 'name:',
         self::ERROR_PARAM_SHOULD_BE_NUMBER => 'name:',
+        self::ERROR_PARAM_SHOULD_BE_ARRAY  => 'name:',
+        self::ERROR_PARAM_SHOULD_BE_OBJECT => 'name:',
         self::ERROR_PARAM_SHOULD_BE_STRING => 'name:',
 
         self::ERROR_METHOD_NOT_EXISTS      => 'name:',

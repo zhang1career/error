@@ -24,6 +24,9 @@ class Data
     public static $error_param_should_not_be_value = System::ERROR_PARAM_SHOULD_NOT_BE_VALUE;
     public static $error_param_should_not_be_value_message = 'Param should not be value';
 
+    public static $error_param_has_wrong_type = System::ERROR_PARAM_TYPE;
+    public static $error_param_has_wrong_type_message = 'Param has wrong type';
+
     public static $error_param_should_be_string = System::ERROR_PARAM_SHOULD_BE_STRING;
     public static $error_param_should_be_string_message = 'Param should be string';
 

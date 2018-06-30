@@ -36,8 +36,11 @@ class Base
     const NOT_EXISTS            = 10;
     const NOT_AVAILABLE         = 11;
 
-    const TYPE_SHOULD_BE_NUMBER = 20;
-    const TYPE_SHOULD_BE_STRING = 21;
+    const TYPE                  = 20;
+    const TYPE_SHOULD_BE_NUMBER = 21;
+    const TYPE_SHOULD_BE_ARRAY  = 22;
+    const TYPE_SHOULD_BE_OBJECT = 23;
+    const TYPE_SHOULD_BE_STRING = 24;
 
     const VALUE_TOO_BIG         = 30;
     const VALUE_TOO_SMALL       = 31;
