@@ -23,6 +23,7 @@ class System extends Base
     const ERROR_PARAM_SHOULD_BE_OBJECT      = Base::PARAM + Base::TYPE_SHOULD_BE_OBJECT;
     const ERROR_PARAM_SHOULD_BE_STRING      = Base::PARAM + Base::TYPE_SHOULD_BE_STRING;
 
+    const ERROR_FUNCTION_NOT_EXISTS         = Base::FUNCTION + Base::NOT_EXISTS;
     const ERROR_METHOD_NOT_EXISTS           = Base::METHOD + Base::NOT_EXISTS;
 
     const ERROR_INDEX_NOT_EXISTS            = Base::INDEX + Base::NOT_EXISTS;
@@ -43,9 +44,10 @@ class System extends Base
         self::ERROR_PARAM_SHOULD_BE_OBJECT => 'Param should be object',
         self::ERROR_PARAM_SHOULD_BE_STRING => 'Param should be string',
 
-        self::ERROR_METHOD_NOT_EXISTS      => 'Method not exists',
+        self::ERROR_FUNCTION_NOT_EXISTS    => 'Function does not exist',
+        self::ERROR_METHOD_NOT_EXISTS      => 'Method does not exist',
 
-        self::ERROR_INDEX_NOT_EXISTS       => 'Index not exsts',
-        self::ERROR_PROPERTY_NOT_EXISTS    => 'Property not exists',
+        self::ERROR_INDEX_NOT_EXISTS       => 'Index does not exist',
+        self::ERROR_PROPERTY_NOT_EXISTS    => 'Property does not exist',
     ];
 }

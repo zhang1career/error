@@ -30,6 +30,9 @@ class Data
     public static $error_param_should_be_string = System::ERROR_PARAM_SHOULD_BE_STRING;
     public static $error_param_should_be_string_message = 'Param should be string';
 
+    public static $error_function_does_not_exist = System::ERROR_FUNCTION_NOT_EXISTS;
+    public static $error_function_does_not_exist_message = 'Function does not exist';
+
     public static $error_unknown = 99999999;
     public static $error_unknown_message = 'undefined message';
 

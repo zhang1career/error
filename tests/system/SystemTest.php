@@ -70,6 +70,15 @@ class SystemTest extends TestCase
         $this->assertEquals(Data::$error_param_should_be_string_message, $message['errstr']);
     }
 
+    /**
+     * function does not exist 的错误信息
+     */
+    public function testBuildFunctionDoesNotExist()
+    {
+        $message = System::build(Data::$error_function_does_not_exist);
+        $this->assertEquals(Data::$error_function_does_not_exist_message, $message['errstr']);
+    }
+
     /****************************************
      * Illegal Tests
      ****************************************/
