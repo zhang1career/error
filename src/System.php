@@ -48,36 +48,4 @@ class System extends Base
         self::ERROR_INDEX_NOT_EXISTS       => 'Index not exsts',
         self::ERROR_PROPERTY_NOT_EXISTS    => 'Property not exists',
     ];
-
-
-    public static $tips = [
-        self::ERROR_PARAM_NOT_EXISTS       => 'name:',
-        self::ERROR_PARAM_SMALLER_THAN_MIN => 'value:',
-        self::ERROR_PARAM_BIGGER_THAN_MAX  => 'value:',
-        self::ERROR_PARAM_SHOULD_BE_VALUE  => 'white:',
-        self::ERROR_PARAM_SHOULD_NOT_BE_VALUE => 'black:',
-        self::ERROR_PARAM_TYPE             => 'name:',
-        self::ERROR_PARAM_SHOULD_BE_NUMBER => 'name:',
-        self::ERROR_PARAM_SHOULD_BE_ARRAY  => 'name:',
-        self::ERROR_PARAM_SHOULD_BE_OBJECT => 'name:',
-        self::ERROR_PARAM_SHOULD_BE_STRING => 'name:',
-
-        self::ERROR_METHOD_NOT_EXISTS      => 'name:',
-
-        self::ERROR_INDEX_NOT_EXISTS       => 'index:',
-        self::ERROR_PROPERTY_NOT_EXISTS    => 'name:',
-    ];
-
-
-    public static function build($errno, $ext = null)
-    {
-        $message = isset(self::$messages[$errno]) ? self::$messages[$errno] : 'undefined message';
-        $tip = isset(self::$tips[$errno]) ? self::$tips[$errno] . $ext : '';
-
-        return [
-            'errno'  => $errno,
-            'errmsg' => $message,
-            'tip'    => $tip,
-        ];
-    }
 }

@@ -46,4 +46,23 @@ class Base
     const VALUE_TOO_SMALL       = 31;
     const VALUE_SHOULD_BE       = 32;
     const VALUE_SHOULD_NOT_BE   = 33;
+
+    /**
+     * @var $messages
+     */
+    public static $messages;
+
+    /**
+     * @param $errno
+     * @return array
+     */
+    public static function build($errno)
+    {
+        $message = isset(static::$messages[$errno]) ? static::$messages[$errno] : 'undefined message';
+
+        return [
+            'errno'  => $errno,
+            'errstr' => $message,
+        ];
+    }
 }

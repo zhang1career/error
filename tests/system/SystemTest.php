@@ -22,7 +22,7 @@ class SystemTest extends TestCase
     public function testBuildOK()
     {
         $message = System::build(Data::$ok);
-        $this->assertEquals(Data::$ok_message, $message['errmsg']);
+        $this->assertEquals(Data::$ok_message, $message['errstr']);
     }
 
     /**
@@ -31,7 +31,7 @@ class SystemTest extends TestCase
     public function testBuildParamSmallerThanMin()
     {
         $message = System::build(Data::$error_param_smaller_than_min);
-        $this->assertEquals(Data::$error_param_smaller_than_min_message, $message['errmsg']);
+        $this->assertEquals(Data::$error_param_smaller_than_min_message, $message['errstr']);
     }
 
     /**
@@ -40,7 +40,7 @@ class SystemTest extends TestCase
     public function testBuildParamShouldBeValue()
     {
         $message = System::build(Data::$error_param_should_be_value);
-        $this->assertEquals(Data::$error_param_should_be_value_message, $message['errmsg']);
+        $this->assertEquals(Data::$error_param_should_be_value_message, $message['errstr']);
     }
 
     /**
@@ -49,7 +49,7 @@ class SystemTest extends TestCase
     public function testBuildParamShouldNotBeValue()
     {
         $message = System::build(Data::$error_param_should_not_be_value);
-        $this->assertEquals(Data::$error_param_should_not_be_value_message, $message['errmsg']);
+        $this->assertEquals(Data::$error_param_should_not_be_value_message, $message['errstr']);
     }
 
     /**
@@ -58,7 +58,7 @@ class SystemTest extends TestCase
     public function testBuildParamHasWrongType()
     {
         $message = System::build(Data::$error_param_has_wrong_type);
-        $this->assertEquals(Data::$error_param_has_wrong_type_message, $message['errmsg']);
+        $this->assertEquals(Data::$error_param_has_wrong_type_message, $message['errstr']);
     }
 
     /**
@@ -67,7 +67,7 @@ class SystemTest extends TestCase
     public function testBuildParamShouldBeString()
     {
         $message = System::build(Data::$error_param_should_be_string);
-        $this->assertEquals(Data::$error_param_should_be_string_message, $message['errmsg']);
+        $this->assertEquals(Data::$error_param_should_be_string_message, $message['errstr']);
     }
 
     /****************************************
@@ -79,7 +79,7 @@ class SystemTest extends TestCase
     public function testBuildWithUnknownErrorCode()
     {
         $message = System::build(Data::$error_unknown);
-        $this->assertEquals(Data::$error_unknown_message, $message['errmsg']);
+        $this->assertEquals(Data::$error_unknown_message, $message['errstr']);
     }
 
 
