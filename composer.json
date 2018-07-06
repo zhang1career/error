@@ -2,7 +2,7 @@
     "name": "phplab/error",
     "description": "error management",
     "keywords": ["error"],
-    "homepage": "https://github.com/zhang1career/data",
+    "homepage": "https://github.com/zhang1career/error",
     "license": "MIT",
     "require": {
         "php": ">=5.5.0"
